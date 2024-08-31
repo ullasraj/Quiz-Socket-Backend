@@ -2,9 +2,9 @@ import express from 'express';
 import http from 'http';
 import { Server, Socket } from 'socket.io';
 import cors from "cors"
-import data from '../data/default.json'
-import { cache } from '../cache';
-import { Questions } from "../data/question.json"
+import data from './data/default.json'
+import { cache } from './cache';
+import { Questions } from "./data/question.json"
 const PORT = process.env.PORT || 5000; 
 const { rooms } = data;
 
