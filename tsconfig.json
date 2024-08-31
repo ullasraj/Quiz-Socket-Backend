@@ -10,8 +10,10 @@
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"declaration": true,
-		"outDir": "./dist"
+		"outDir": "./dist",
+		"rootDir": "./src",
 	},
 
-	"exclude": ["node_modules"]
+	"include": ["src/**/*", "data/*"],
+	"exclude": ["node_modules", "dist"]
 }

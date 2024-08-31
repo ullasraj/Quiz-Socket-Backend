@@ -22,9 +22,11 @@
     "express": "^4.19.2",
     "nodemon": "^3.1.4",
     "pre-commit": "^1.2.2",
-    "rimraf": "^6.0.1",
     "socket.io": "^4.7.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1"
   }
 }
