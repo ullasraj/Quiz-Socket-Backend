@@ -5,7 +5,7 @@ import cors from "cors"
 import data from './data/default.json'
 import { cache } from './cache';
 import { Questions } from "./data/question.json"
-
+const PORT = process.env.PORT || 5000; 
 const { rooms } = data;
 
 const app = express();
@@ -14,7 +14,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:8001',
+        origin: 'https://quiz-socket-frontend-ny7zwdd0k-ullasrajs-projects.vercel.app',
         methods: ['GET', 'POST'],
     },
 });
@@ -159,6 +159,6 @@ const askNewQuestion = (roomId: number) => {
     cache.set("rooms", roomId, roomToCache);
    
 }
-server.listen(5000, () => {
+server.listen(PORT, () => {
     console.log("Server listening on port 5000");
 });
