@@ -23,6 +23,10 @@ rooms.forEach((item, index) => {
     cache.set("rooms", item.id, { ...item });
 });
 
+app.get("/hello",(req,res)=>{
+    res.send("hello")
+})
+
 io.on("connection", (socket) => {
 
     socket.on("available_rooms", () => {
