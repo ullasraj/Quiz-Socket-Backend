@@ -2,9 +2,9 @@ import express from 'express';
 import http from 'http';
 import { Server, Socket } from 'socket.io';
 import cors from "cors"
-import data from './data/default.json'
-import { cache } from './cache';
-import { Questions } from "./data/question.json"
+import data from '../data/default.json'
+import { cache } from '../cache';
+import { Questions } from "../data/question.json"
 const PORT = process.env.PORT || 5000; 
 const { rooms } = data;
 
@@ -14,7 +14,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: 'https://quiz-socket-frontend-ny7zwdd0k-ullasrajs-projects.vercel.app',
+        origin: 'https://quiz-socket-frontend-3y901w1hb-ullasrajs-projects.vercel.app',
         methods: ['GET', 'POST'],
     },
 });
